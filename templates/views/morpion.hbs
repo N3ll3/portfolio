@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     {{>header}}
+    <p>Un jeu cree par {{name}}</p>
+<div class="main_content">
+<div>Player 1 </div>
+<span class="symbol" >O</span>
+<p>Score :</p>
+
+<div>Player 2</div>
+<span class="symbol">X</span>
+<p>Score</p>
+
+<br>
+</div>
+    <table id="ttt">
+        <tr>
+            <td id="A1"></td>
+            <td id="A2"></td>
+            <td id="A3"></td>
+        </tr>
+         <tr>
+            <td id="B1"></td>
+            <td id="B2"></td>
+            <td id="B3"></td>
+        </tr>
+         <tr>
+            <td id="C1"></td>
+            <td id="C2"></td>
+            <td id="C3"></td>
+        </tr>
+    </table>
+
+{{>footer}}
+</body>
+
+</html>

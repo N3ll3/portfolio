@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="css/styles.css">
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma météo</title>
+</head>
+<body>
+    {{>header}}
+<div class="main_content">
+    <form>
+    <label for="meteo"> Renseigner une ville : </label>
+    <input>
+    <button>Valider</button>
+</form>
+<div id="weatherInfo"></div>
+<div id="error"></div>
+
+</div>
+
+
+{{>footer}}
+  <script src="js/weather_front.js"></script>
+  </body>
+</html>
