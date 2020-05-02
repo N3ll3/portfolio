@@ -12,7 +12,7 @@ weatherform.addEventListener('submit', (e) => {
    
    const location = document.querySelector('input').value;
     divError.textContent = 'En cours...'
-    fetch(`http://localhost:3000/getweather/${location}`)
+    fetch(`/getweather/${location}`)
     .then((response) => {
       response.json().then((data) => {
          divInfo.textContent=data.weatherInfo
