@@ -3,6 +3,7 @@ const express = require('express');
 const hbs = require('hbs');
 
 const getWeatherFor = require("./utils/getWeatherFor");
+
 const port=process.env.PORT||3000;
 
 const app = express();
@@ -23,8 +24,7 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(publicDirPath));
 
 const user = {
-    name:'Nelle',
-    location:'La Rochelle'
+    name:'Emmanuelle Chartier',
 }
 
 app.get('/',(req,res)=>{
@@ -32,6 +32,13 @@ app.get('/',(req,res)=>{
         title : 'Portfolio',
         name : user.name
     });
+})
+
+app.get('/locabike',(req,res)=>{
+    res.render('locabike',{
+        user
+    })
+
 })
 
 app.get('/morpion',(req,res)=>{
@@ -49,6 +56,9 @@ app.get('/meteo',(req,res)=>{
             })       
     })
 
+/**
+ * lien vers API meteo
+ */
 app.get('/getweather/:location',(req, res)=>{
     if (!req.params.location) {
         return res.send({
@@ -69,14 +79,7 @@ app.get('/getweather/:location',(req, res)=>{
         });
         
 })
-   
-app.get('/morpion/*',(req,res)=>{
-    res.render('404',{
-        title : '404 Page',
-        name:user.name,
-        errorMessage:'Wrong Url, try Again'
-    })
-})
+
 app.get('*',(req,res)=>{
     res.render('404',{
         title : '404 Page',
