@@ -1,0 +1,307 @@
+body {
+    box-sizing: border-box;
+    background-image: url(../img/toulouse.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Kalam', cursive;
+    margin: 5%;
+}
+
+header {
+    text-align: center;
+    color: green;
+    font-weight: 600;
+    font-size: 5em;
+    margin: 5%;
+    text-shadow: 2px 2px 2px white;
+}
+
+
+/*-----------------slider-----------------*/
+#diaporama {
+    height: auto;
+    margin-bottom: 2%;
+    background-color: white;
+    border-radius: 1em;
+    padding-bottom: 1em;
+}
+
+#sliderContent {
+    width: 100%;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    box-shadow: 6px 6px 6px black;
+}
+
+.slide {
+    display: none;
+}
+
+.active {
+    width: 100%;
+    background-color: grey;
+    border-radius: 1em 1em
+}
+
+.active img {
+    width: 100%;
+    height: auto;
+    border-radius: 1em 1em 0 0;
+}
+
+figure {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+figcaption {
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    opacity: 1;
+    color: white;
+    font-size: 1.5em;
+}
+
+
+.chevron {
+    color: grey;
+    cursor: pointer;
+    text-align: center;
+    width: 3em;
+}
+
+.chevron i {
+    vertical-align: middle;
+}
+
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.navBtn {
+    width: 3em;
+}
+
+/*-------------------------------Map/Reservation-------------------*/
+
+.containerResa {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#mapContainer {
+    position: relative;
+    height: 600px;
+    width: 60%;
+}
+
+#noClick {
+    position: absolute;
+    top: 0;
+    height: 600px;
+    width: 100%;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+#map {
+    z-index: 1;
+    height: 600px;
+    border: solid grey;
+    border-radius: 1em;
+    width: 100%;
+    margin-right: 20px;
+}
+
+#infoStation {
+    position: relative;
+    border: solid grey;
+    border-radius: 1em;
+    height: 600px;
+    width: 40%;
+    opacity: 1;
+    background-color: white;
+    padding-right: 5%;
+}
+
+#infoStation h3 {
+    background-color: white;
+    opacity: 1;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+#showed {
+    margin-bottom: 5px;
+    margin-top: 7%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1em;
+    visibility: hidden;
+    height: auto;
+}
+
+
+#detailReservation {
+    border: solid grey;
+    border-radius: 1em;
+    opacity: 1;
+    background-color: white;
+    border-radius: 1em;
+    min-height: 30px;
+    margin-top: 15px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#reservationInfos {
+    margin-bottom: 7px;
+}
+
+form :disabled {
+    color: grey;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+#detailReservation div {
+    text-align: center;
+}
+
+
+#infoStation input {
+    width: 100%;
+}
+
+#infoStation label {
+    margin-top: 20px;
+}
+
+#btnResa {
+    margin-top: 10px;
+}
+
+
+
+/*---------------------------Canvas--------------------------*/
+
+#infoStation {
+    height: auto;
+}
+
+#sign {
+    visibility: hidden;
+    margin: auto;
+}
+
+#signPad {
+    display: block;
+    border: solid grey;
+    border-radius: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resaBtn {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: 5px;
+    font-size: 1em;
+    margin-right: 1em;
+}
+
+
+/*-----------------------------Info Reservation----------------------*/
+#cancelResa {
+    visibility: hidden;
+}
+
+footer {
+    padding: 10%;
+}
+
+
+
+/*------------------------------MEDIA QUERIES--------------------------*/
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .containerResa {
+        margin-top: 5%;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mapContainer {
+        position: relative;
+        height: 300px;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #noClick {
+        position: absolute;
+        top: 0;
+        height: 300px;
+        /* width: 80%; */
+        z-index: 0;
+        opacity: 0.5;
+    }
+
+    #map {
+        z-index: 1;
+        border: solid grey;
+        border-radius: 1em;
+        height: 300px;
+        /* width: 80%; */
+
+    }
+
+    #infoStation {
+        display: block;
+        border: solid grey;
+        border-radius: 1em;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        opacity: 1;
+        background-color: white;
+    }
+
+    button {
+        width: 80px;
+        height: 25px;
+        border-radius: 30px;
+        margin-top: 15px;
+        font-size: 0.8em;
+        margin-right: 1em;
+    }
+
+
+}

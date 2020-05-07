@@ -12,8 +12,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "hbs": "^4.1.1",
-    "leaflet": "^1.6.0",
-    "moment": "^2.25.1",
     "postman-request": "^2.88.1-postman.22"
   }
 }

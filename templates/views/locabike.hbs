@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="css/locabike/style.css" />
+  <link rel="stylesheet" href="js/locabike/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="js/locabike/leaflet/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+  <title>Reservation de velo sur internet</title>
+</head>
+
+<body>
+  <header>LocAbike Toulouse</header>
+
+  <div id="diaporama">
+    <figure>
+      <img src="img/locabike/img1.png" alt="" />
+      <figcaption>
+        Bienvenue chez LocaBike, l'appli de réservation de
+        <i class="fas fa-bicycle"></i> dans la ville rose
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="img/locabike/img2.png" alt="" />
+      <figcaption>
+        Etape 1 : Sélectionner une station
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="img/locabike/img3.png" alt="" />
+      <figcaption>
+        Etape 2 : Rentrer vos nom et prénom et cliquer sur réserver
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="img/locabike/img4.png" alt="" />
+      <figcaption>
+        Etape 3 : Signer dans le cadre prévu à cet effet et valider
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="img/locabike/img5.png" alt="" />
+      <figcaption>
+        Votre vélo est réservé pendant 20 minutes.
+      </figcaption>
+    </figure>
+    <div id="prev" class="chevron chevronLeft">
+      <i class="fas fa-chevron-left fa-2x"></i>
+    </div>
+    <div id="next" class="chevron chevronRight">
+      <i class="fas fa-chevron-right fa-2x"></i>
+    </div>
+
+    <button id="playButton">
+      <i class="navBtn fas fa-play-circle"></i>
+    </button>
+    <button id="stopButton">
+      <i class=" navBtn fas fa-stop-circle"></i>
+    </button>
+  </div>
+
+  <div class="containerResa">
+    <div id="mapContainer">
+      <div id="map"></div>
+      <div id="noClick"></div>
+    </div>
+    <div id="infoStation">
+      <h3>Détails de la station</h3>
+
+      <div id="showed">
+        <p id="stationName"></p>
+        <p id="address"></p>
+        <p id="places"></p>
+        <p id="bikes"></p>
+
+        <form id="reservationInfos">
+          <label for="name">Nom : </label>
+          <input type="text" name="userName" required />
+          <br />
+          <label for="firstName">Prénom : </label>
+          <input type="text" name="firstName" required />
+          <input id="inputHidden" type="hidden" name="stationName" />
+          <br />
+          <button id="btnResa" type="submit">Réserver</button>
+        </form>
+        <div id="sign">
+          <canvas id="signPad" width="180" height="150">
+            Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.
+          </canvas>
+          <div id="resaBtn">
+            <button type="submit" id="confirmButton">Valider</button>
+            <button id="eraseButton">Effacer</button>
+            <button id="cancelSign">Annuler</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="detailReservation">
+    <div>
+      <p id="resa"></p>
+      <p id="timer"></p>
+      <div id="cancelResa">
+        <button id="cancelButton">Annuler</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Site réalisé par {{user.name}} pour les besoins d'un projet étudiant dans le cadre de la
+    formation OpenClassRoom - Dévélopppeur Web Junior
+  </footer>
+  <script src="js/locabike/HTMLmanager.js"></script>
+  <script src="js/locabike/Slider.js"></script>
+  <script src="js/locabike/Map.js"></script>
+  <script src="js/locabike/Station.js"></script>
+  <script src="js/locabike/connectionAPI.js"></script>
+  <script src="js/locabike/leaflet/leaflet-src.js"></script>
+  <script src="js/locabike/leaflet/leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
+  <script src="js/locabike/Reservation.js"></script>
+  <script src="js/locabike/Canvas.js"></script>
+  <script src="js/locabike/moment.js"></script>
+  <script src="js/locabike/Timer.js"></script>
+  <script src="js/locabike/main.js"></script>
+</body>
+
+</html>
